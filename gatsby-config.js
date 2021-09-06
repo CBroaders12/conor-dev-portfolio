@@ -13,5 +13,8 @@ module.exports = {
 				spaceId: '6i4nt0aquy0a',
 			},
 		},
+		{
+			resolve: 'gatsby-plugin-material-ui',
+		},
 	],
 };
