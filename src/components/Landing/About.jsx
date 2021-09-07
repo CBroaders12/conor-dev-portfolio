@@ -82,12 +82,6 @@ const About = () => {
 					</Typography>
 				</Grid>
 			</Grid>
-			<Grid container item justifyContent='center'>
-				<Fab size='large' variant='extended' href='#skills'>
-					<Typography variant='button'>Skills</Typography>
-					<ExpandMore />
-				</Fab>
-			</Grid>
 		</Grid>
 	);
 };

@@ -3,7 +3,6 @@ import { makeStyles } from '@material-ui/styles';
 
 import Splash from './Splash';
 import About from './About';
-import Skills from './Skills';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -17,7 +16,6 @@ const Landing = () => {
 		<div className={classes.root}>
 			<Splash />
 			<About />
-			<Skills />
 		</div>
 	);
 };
