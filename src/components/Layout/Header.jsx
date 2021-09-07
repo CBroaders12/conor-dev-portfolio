@@ -3,7 +3,7 @@ import AppBar from '@material-ui/core/AppBar';
 import ToolBar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 
-import monochromeLogo from '../images/LogoMonochromeWhite.svg';
+import monochromeLogo from '../../images/LogoMonochromeWhite.svg';
 import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
