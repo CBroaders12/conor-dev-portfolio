@@ -2,14 +2,18 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Fab from '@material-ui/core/Fab';
-import ExpandMore from '@material-ui/icons/ExpandMore';
-import Logo from './Logo/Logo';
 import { makeStyles, useMediaQuery, useTheme } from '@material-ui/core';
+import ExpandMore from '@material-ui/icons/ExpandMore';
+
+import Logo from './Logo/Logo';
 
 const useStyles = makeStyles((theme) => ({
-	splash: {
+	root: {
+		minHeight: '100vh',
 		padding: theme.spacing(6),
-		height: '100vh',
+	},
+	splashContainer: {
+		maxWidth: theme.breakpoints.values.lg,
 	},
 	logoContainer: {
 		maxWidth: '450px',
@@ -18,9 +22,6 @@ const useStyles = makeStyles((theme) => ({
 	smallLogoContainer: {
 		maxWidth: '300px',
 		paddingRight: '0',
-	},
-	buttonContainer: {
-		alignSelf: 'flex-end',
 	},
 }));
 
@@ -31,14 +32,14 @@ const Splash = () => {
 
 	return (
 		<Grid
-			className={classes.splash}
+			className={classes.root}
 			container
 			direction='column'
 			justifyContent='space-around'
 			alignItems='center'
 		>
 			<Grid
-				// className={classes.splash}
+				className={classes.splashContainer}
 				container
 				direction='row'
 				justifyContent='center'
@@ -60,18 +61,14 @@ const Splash = () => {
 					<Typography variant='h2' align='center' gutterBottom>
 						Conor Broaders
 					</Typography>
-					<Typography variant='h4' align='center'>
+					<Typography variant='h4' align='center' gutterBottom>
 						Web Developer
 					</Typography>
 				</Grid>
 			</Grid>
-			<Grid
-				container
-				item
-				justifyContent='center'
-				className={classes.buttonContainer}
-			>
-				<Fab size='large' href='#aboutMe'>
+			<Grid container item justifyContent='center'>
+				<Fab size='large' variant='extended' href='#aboutMe'>
+					<Typography variant='button'>About Me</Typography>
 					<ExpandMore />
 				</Fab>
 			</Grid>
