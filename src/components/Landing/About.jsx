@@ -11,6 +11,7 @@ import headshot from '../../images/conor-broaders-headshot-square.png';
 const useStyles = makeStyles((theme) => ({
 	root: {
 		backgroundColor: theme.palette.background.paper,
+		padding: theme.spacing(6),
 		height: '100vh',
 	},
 	container: {
@@ -82,7 +83,7 @@ const About = () => {
 				</Grid>
 			</Grid>
 			<Grid container item justifyContent='center'>
-				<Fab size='large' variant='extended'>
+				<Fab size='large' variant='extended' href='#skills'>
 					<Typography variant='button'>Skills</Typography>
 					<ExpandMore />
 				</Fab>
