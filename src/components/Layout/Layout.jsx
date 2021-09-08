@@ -15,6 +15,9 @@ const darkTheme = createTheme({
 			dark: '#660A66',
 			light: '#A54DA5',
 		},
+		secondary: {
+			main: '#A54DA5',
+		},
 	},
 	overrides: {
 		MuiCssBaseline: {

@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-const Splash = () => {
+const Splash = ({ name, job }) => {
 	const classes = useStyles();
 	const theme = useTheme();
 	const matches = useMediaQuery(theme.breakpoints.up('sm'));
@@ -59,10 +59,10 @@ const Splash = () => {
 				</Grid>
 				<Grid item xs={12} md={6}>
 					<Typography variant='h2' align='center' gutterBottom>
-						Conor Broaders
+						{name}
 					</Typography>
 					<Typography variant='h4' align='center' gutterBottom>
-						Web Developer
+						{job}
 					</Typography>
 				</Grid>
 			</Grid>

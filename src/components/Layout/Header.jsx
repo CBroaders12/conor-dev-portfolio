@@ -36,11 +36,10 @@ const Header = () => {
 				<Typography variant='h6' className={classes.title}>
 					Conor Broaders
 				</Typography>
-				<Typography>
-					<Link to='/contact' color='inherit'>
-						Contact
-					</Link>
-				</Typography>
+
+				<Link to='/contact' color='inherit' variant='h6'>
+					Contact
+				</Link>
 			</ToolBar>
 		</AppBar>
 	);

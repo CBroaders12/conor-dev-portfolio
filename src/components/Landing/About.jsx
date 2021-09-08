@@ -1,12 +1,8 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-import Fab from '@material-ui/core/Fab';
 import Typography from '@material-ui/core/Typography';
-import ExpandMore from '@material-ui/icons/ExpandMore';
 import { makeStyles } from '@material-ui/core';
-
-import headshot from '../../images/conor-broaders-headshot-square.png';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -29,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-const About = () => {
+const About = ({ bio, headshot }) => {
 	const classes = useStyles();
 
 	return (
@@ -52,7 +48,7 @@ const About = () => {
 				<Grid item xs={12} md={5}>
 					<Paper elevation={8} className={classes.paper}>
 						<img
-							src={headshot}
+							src={headshot.file.url}
 							alt='Conor Broaders'
 							className={classes.headshot}
 						/>
@@ -60,25 +56,11 @@ const About = () => {
 				</Grid>
 				<Grid item xs={12} md={6}>
 					<Typography paragraph variant='body1' align='left'>
-						Lorem ipsum dolor sit amet, consectetur adipisicing
-						elit. Reiciendis tempora perspiciatis tenetur incidunt
-						dolor. Asperiores dolore ipsam tempore aliquam,
-						laudantium tempora voluptatum, nostrum nesciunt
-						doloribus consequatur earum voluptates eligendi itaque!
-					</Typography>
-					<Typography paragraph variant='body1' align='left'>
-						Lorem ipsum dolor sit amet, consectetur adipisicing
-						elit. Reiciendis tempora perspiciatis tenetur incidunt
-						dolor. Asperiores dolore ipsam tempore aliquam,
-						laudantium tempora voluptatum, nostrum nesciunt
-						doloribus consequatur earum voluptates eligendi itaque!
-					</Typography>
-					<Typography paragraph variant='body1' align='left'>
-						Lorem ipsum dolor sit amet, consectetur adipisicing
-						elit. Reiciendis tempora perspiciatis tenetur incidunt
-						dolor. Asperiores dolore ipsam tempore aliquam,
-						laudantium tempora voluptatum, nostrum nesciunt
-						doloribus consequatur earum voluptates eligendi itaque!
+						<span
+							dangerouslySetInnerHTML={{
+								__html: bio.childMarkdownRemark.html,
+							}}
+						></span>
 					</Typography>
 				</Grid>
 			</Grid>
