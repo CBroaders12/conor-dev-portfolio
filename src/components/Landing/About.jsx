@@ -4,6 +4,55 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core';
 
+import jsLogo from '../../images/icons/js.png';
+import tsLogo from '../../images/icons/ts.png';
+import cssLogo from '../../images/icons/css.png';
+import htmlLogo from '../../images/icons/html.png';
+import nodeLogo from '../../images/icons/node.png';
+import psqlLogo from '../../images/icons/psql.png';
+import reactLogo from '../../images/icons/react.png';
+import materialLogo from '../../images/icons/materialui.png';
+import githubLogo from '../../images/icons/github.png';
+
+const techIcons = [
+	{
+		name: 'HTML',
+		file: htmlLogo,
+	},
+	{
+		name: 'CSS',
+		file: cssLogo,
+	},
+	{
+		name: 'JavaScript',
+		file: jsLogo,
+	},
+	{
+		name: 'TypeScript',
+		file: tsLogo,
+	},
+	{
+		name: 'React',
+		file: reactLogo,
+	},
+	{
+		name: 'Node',
+		file: nodeLogo,
+	},
+	{
+		name: 'PostgreSQL',
+		file: psqlLogo,
+	},
+	{
+		name: 'Material UI',
+		file: materialLogo,
+	},
+	{
+		name: 'GitHub',
+		file: githubLogo,
+	},
+];
+
 const useStyles = makeStyles((theme) => ({
 	root: {
 		backgroundColor: theme.palette.background.paper,
@@ -23,6 +72,12 @@ const useStyles = makeStyles((theme) => ({
 	headshot: {
 		height: 'auto',
 		width: '100%',
+	},
+	techLogo: {
+		filter: 'invert(60%)',
+		height: '64px',
+		marginRight: theme.spacing(1),
+		marginBottom: theme.spacing(1),
 	},
 }));
 
@@ -63,6 +118,33 @@ const About = ({ bio, headshot }) => {
 							}}
 						></span>
 					</Typography>
+				</Grid>
+				<Grid
+					container
+					item
+					xs={12}
+					direction='column'
+					alignItems='center'
+				>
+					<Typography variant='h4' gutterBottom>
+						My Tools
+					</Typography>
+					<Grid
+						item
+						container
+						xs={12}
+						direction='row'
+						alignItems='center'
+						justifyContent='center'
+					>
+						{techIcons.map((item) => (
+							<img
+								className={classes.techLogo}
+								src={item.file}
+								alt={item.name}
+							/>
+						))}
+					</Grid>
 				</Grid>
 			</Grid>
 		</Grid>
