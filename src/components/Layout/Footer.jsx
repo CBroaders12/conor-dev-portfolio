@@ -6,7 +6,7 @@ import MuiLink from '@material-ui/core/Link';
 const useStyles = makeStyles((theme) => ({
 	footer: {
 		backgroundColor: theme.palette.primary.main,
-		padding: theme.spacing(6),
+		padding: theme.spacing(2),
 	},
 }));
 

@@ -14,7 +14,7 @@ module.exports = {
 			},
 		},
 		{
-			resolve: 'gatsby-plugin-material-ui',
+			resolve: 'gatsby-theme-material-ui',
 		},
 	],
 };
