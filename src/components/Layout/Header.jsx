@@ -18,6 +18,9 @@ const useStyles = makeStyles((theme) => ({
 	title: {
 		flexGrow: 1,
 	},
+	link: {
+		marginRight: theme.spacing(2),
+	},
 }));
 
 const Header = () => {
@@ -36,8 +39,20 @@ const Header = () => {
 				<Typography variant='h6' className={classes.title}>
 					Conor Broaders
 				</Typography>
-
-				<Link to='/contact' color='inherit' variant='h6'>
+				<Link
+					to='/'
+					color='inherit'
+					variant='h6'
+					className={classes.link}
+				>
+					Home
+				</Link>
+				<Link
+					to='/contact'
+					color='inherit'
+					variant='h6'
+					className={classes.link}
+				>
 					Contact
 				</Link>
 			</ToolBar>

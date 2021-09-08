@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
 	root: {
 		backgroundColor: theme.palette.background.paper,
 		padding: theme.spacing(6),
-		height: '100vh',
+		minHeight: '100vh',
 	},
 	container: {
 		maxWidth: theme.breakpoints.values.lg,
@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
 		backgroundColor: theme.palette.background.main,
 		overflow: 'hidden',
 		borderRadius: '50%',
+		maxWidth: '500px',
 	},
 	headshot: {
 		height: 'auto',
@@ -45,7 +46,7 @@ const About = ({ bio, headshot }) => {
 				justifyContent='center'
 				spacing={10}
 			>
-				<Grid item xs={12} md={5}>
+				<Grid item container justifyContent='center' xs={12} md={5}>
 					<Paper elevation={8} className={classes.paper}>
 						<img
 							src={headshot.file.url}

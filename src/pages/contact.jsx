@@ -2,14 +2,12 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import Paper from '@material-ui/core/Paper';
 import Divider from '@material-ui/core/Divider';
 import Link from '@material-ui/core/Link';
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
 import { LinkedIn, GitHub } from '@material-ui/icons';
 
 import Layout from '../components/Layout/Layout';
+import ContactForm from '../components/Contact/ContactForm';
 
 const useStyles = makeStyles((theme) => ({
 	container: {
@@ -24,59 +22,6 @@ const useStyles = makeStyles((theme) => ({
 		margin: theme.spacing(1),
 	},
 }));
-
-const useContactStyles = makeStyles((theme) => ({
-	paper: {
-		marginRight: theme.spacing(4),
-		marginBottom: theme.spacing(4),
-		padding: theme.spacing(4),
-		width: '100%',
-	},
-	message: {
-		width: '100%',
-		margin: theme.spacing(1),
-	},
-	textField: {
-		margin: theme.spacing(1),
-	},
-}));
-
-const ContactForm = () => {
-	const classes = useContactStyles();
-
-	return (
-		<Paper className={classes.paper}>
-			<form autoComplete='off'>
-				<TextField
-					className={classes.textField}
-					label='name'
-					type='text'
-					variant='filled'
-					color='secondary'
-				/>
-				<br />
-				<TextField
-					className={classes.textField}
-					label='email'
-					type='email'
-					variant='filled'
-					color='secondary'
-				/>
-				<TextField
-					className={classes.message}
-					label='Message'
-					placeholder='Your awesome message!'
-					type='text'
-					multiline
-					rows={4}
-					variant='filled'
-					color='secondary'
-				/>
-			</form>
-			<Button variant='contained'>Submit</Button>
-		</Paper>
-	);
-};
 
 const Contact = () => {
 	const classes = useStyles();
