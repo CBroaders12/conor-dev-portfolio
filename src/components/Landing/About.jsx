@@ -26,6 +26,9 @@ const useStyles = makeStyles((theme) => ({
 		height: 'auto',
 		width: '100%',
 	},
+	bio: {
+		fontSize: theme.typography.body1.fontSize,
+	},
 }));
 
 const backupBio = `<p>Hi! I'm Conor and I am a Web Developer currently based in Indianapolis, IN. My journey in coding started last year when I started teaching myself basic computer science with Python. As I learned more I was drawn to web development in particular and attended Eleven Fifty Academy's Web Development Bootcamp. In that program I discovered a passion for building sleek and elegant front-end applications along with robust and functional APIs to power those applications.<br /><br />Since graduating Eleven Fifty, I have been continuing to learn more and push myself into new technologies and skills. My passion is education and learning, and I do my absolute best to share what I know with other learners, which I do regularly as a Learning Assistant at the very bootcamp I attended.<br /><br />In addition to development I am also a musician, specifically a classical singer. When I am not designing websites, building servers, or researching technologies, odds are you can find me learning new music or digging up interesting songs both new and old.</p>`;
@@ -60,15 +63,14 @@ const About = ({ bio, headshot, tools }) => {
 					</Paper>
 				</Grid>
 				<Grid item xs={12} md={6}>
-					<Typography paragraph variant='body1' align='left'>
-						<span
-							dangerouslySetInnerHTML={{
-								__html: bio.childMarkdownRemark.html
-									? bio.childMarkdownRemark.html
-									: backupBio,
-							}}
-						></span>
-					</Typography>
+					<div
+						className={classes.bio}
+						dangerouslySetInnerHTML={{
+							__html: bio.childMarkdownRemark.html
+								? bio.childMarkdownRemark.html
+								: backupBio,
+						}}
+					></div>
 				</Grid>
 				<ToolsContainer tools={tools} />
 			</Grid>
