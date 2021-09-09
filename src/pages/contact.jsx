@@ -12,7 +12,10 @@ import ContactForm from '../components/Contact/ContactForm';
 const useStyles = makeStyles((theme) => ({
 	container: {
 		paddingTop: theme.spacing(8),
-		paddingLeft: theme.spacing(5),
+		paddingLeft: theme.spacing(2),
+	},
+	textContent: {
+		marginRight: theme.spacing(4),
 	},
 	contentItem: {
 		padding: theme.spacing(2),
@@ -33,16 +36,15 @@ const Contact = () => {
 				justifyContent='center'
 				alignItems='center'
 				className={classes.container}
-				spacing={4}
 			>
 				<Grid
 					container
 					item
 					direction='column'
-					// alignItems='center'
 					justifyContent='center'
 					xs={12}
 					md={6}
+					className={classes.textContent}
 				>
 					<Grid item className={classes.contentItem}>
 						<Typography variant='h3' align='left' gutterBottom>

@@ -5,7 +5,6 @@ import Layout from '../components/Layout/Layout';
 import Landing from '../components/Landing/Landing';
 
 const IndexPage = ({ data }) => {
-	console.log(data);
 	return (
 		<Layout>
 			<Landing data={data} />
@@ -28,6 +27,14 @@ export const query = graphql`
 				childMarkdownRemark {
 					html
 				}
+			}
+			tools {
+				icon {
+					file {
+						url
+					}
+				}
+				name
 			}
 		}
 	}
