@@ -1,8 +1,11 @@
 import React from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container';
-import { createTheme, ThemeProvider } from '@material-ui/core/styles';
-import { makeStyles } from '@material-ui/styles';
+import {
+	createTheme,
+	ThemeProvider,
+	makeStyles,
+} from '@material-ui/core/styles';
 
 import Header from './Header';
 import Footer from './Footer';
